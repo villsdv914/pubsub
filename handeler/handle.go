@@ -14,7 +14,7 @@ func HandleData(data []byte){
 	var rateplan sqlutils.RatePlan
 	publog.Logrs.Info(data)
 	_ = json.Unmarshal(data, &t)
-	publog.Logrs.Info("after unmarshaling  %s", t)
+
 	m := t.(map[string]interface{})
 	l := m["offers"].([]interface{})
 	for _, v := range l {
