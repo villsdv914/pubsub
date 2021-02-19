@@ -7,6 +7,6 @@ logrus
 ampq
 
 ## Run
-go run main.go
+go build main.go
 
 It will create Related table in eastern.db and insert all data after inserting data it will be stopped.
