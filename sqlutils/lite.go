@@ -80,6 +80,10 @@ func SqliteCreateData(table interface{}) bool {
 		panic("failed to connect database")
 	}
 	publog.Logrs.Info("CreateData__ connected database")
-	db.Create(table)
+	t := db.Create(table)
+	if t.Error != nil{
+		return false
+	}
+	publog.Logrs.Info("Record Inserted in database")
 	return true
 }
