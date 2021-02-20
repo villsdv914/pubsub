@@ -42,7 +42,7 @@ func Receive() ([]byte, error){
 			msg = d.Body
 		}
 	}()
-	time.Sleep(1 * time.Second)
+	time.Sleep(25 * time.Millisecond)
 	return msg ,nil
 
 }

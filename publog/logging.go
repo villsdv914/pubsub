@@ -4,7 +4,7 @@ import (
 	"os"
 )
 var Logrs = logrus.New()
-func Init(){
+func init(){
 	Logrs.Out = os.Stdout
 	Logrs.Formatter = &logrus.JSONFormatter{}
 

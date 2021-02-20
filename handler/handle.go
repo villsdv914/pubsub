@@ -1,4 +1,4 @@
-package handeler
+package handler
 
 import (
 	"encoding/json"
@@ -62,6 +62,7 @@ func HandleData(data []byte){
 
 	}
 }
+	publog.Logrs.Info("sent Data in database")
 	sqlutils.SqliteCreateData(&hotel)
 }
 

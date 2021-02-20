@@ -2,7 +2,8 @@ package main
 
 import (
 	"pubsub/exchange"
-	"pubsub/handeler"
+
+	"pubsub/handler"
 	"pubsub/publog"
 	"pubsub/sqlutils"
 )
@@ -15,5 +16,5 @@ func main() {
 	if err != nil{
 		panic(err)
 	}
-	handeler.HandleData(data)
+	handler.HandleData(data)
 }
